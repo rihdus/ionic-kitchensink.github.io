@@ -1,0 +1,38 @@
+<ion-view title="Dialog">
+	<ion-content>
+
+		<form class="list">
+
+			<label class="item item-input item-select">
+				<div class="input-label">
+					Theme
+				</div>
+				<select ng-model="dialogCss">
+					<option value="''">Ionic</option>
+					<option value="'mdDialog'">Material Design</option>
+					<option value="'iOSDialog'">iOS</option>
+				</select>
+			</label>
+
+			<div class="item">
+				<button
+					ng-click="showAlert()"
+					class="button button-block">Show Alert</button>
+			</div>
+
+			<div class="item">
+				<button
+					ng-click="showConfirm()"
+					class="button button-block">Show Confirm</button>
+			</div>
+
+			<div class="item">
+				<button
+					ng-click="showCustom()"
+					class="button button-block">Show Custom Dialog</button>
+			</div>
+
+		</form>
+
+	</ion-content>
+</ion-view>

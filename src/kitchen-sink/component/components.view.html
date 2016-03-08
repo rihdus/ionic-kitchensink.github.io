@@ -1,0 +1,94 @@
+<ion-view title="Components">
+	<ion-content>
+		<div class="card list" ng-controller="SearchSelectViewController">
+
+			<div class="item item-divider">
+				Select and Select
+			</div>
+
+			<label class="item item-input item-stacked-label">
+				<span class="input-label">Invite people</span>
+				<input type="text"
+				       ng-model="inviteQuery"
+				       search-select="items in findPeople"
+				       placeholder="Start typing to trigger selector">
+			</label>
+
+			<div
+				ng-click="showSearchSelector('upper')"
+				class="item item-icon-left item-text-wrap">
+				<i class="icon ion-ios-medical royal"></i>
+				<p class="">Search and Select using Service API.</p>
+			</div>
+
+		</div>
+
+		<form class="card list">
+			<div class="item item-divider">
+				Dialogs
+			</div>
+			<div class="row row-no-padding responsive-sm">
+				<div class="col">
+					<label class="item item-input item-select item-dark">
+						<div class="input-label">
+							Dialog Style
+						</div>
+						<select ng-model="dialogStyle"
+						        ng-options="option.name for option in dialogStyleOptions">
+							<option value="">Pick Style</option>
+						</select>
+					</label>
+				</div>
+				<div class="col">
+					<label class="item item-input item-select item-dark">
+						<div class="input-label">
+							Dialog Theme
+						</div>
+						<select ng-model="dialogStyle"
+						        ng-options="option.name for option in dialogThemeOptions">
+							<option value="">Pick Theme</option>
+						</select>
+					</label>
+				</div>
+			</div>
+			<div class="item item-complex">
+				<div class="button-bar padding-vertical">
+					<button
+						ng-click="showAlert(dialogStyle.value)"
+						class="button button-small button-clear button-positive">Show Alert
+					</button>
+					<button
+						ng-click="showConfirm(dialogStyle.value)"
+						class="button button-small button-clear button-positive">Show Confirm
+					</button>
+					<button
+						ng-click="showCustom(dialogStyle.value)"
+						class="button button-small button-clear button-positive">Show Custom Dialog
+					</button>
+				</div>
+			</div>
+			<div
+				ng-click="showCustomSelect()"
+				class="item item-text-wrap item-icon-left royal">
+				<p>Custom Dialog done using a custom controller used a select.</p>
+				<i class="icon ion-grid"></i>
+			</div>
+
+		</form>
+
+		<div class="card list">
+
+			<div class="item item-divider">Modal</div>
+
+			<div class="item text-center">
+				<p class="padding-bottom">Modal with its very own controller.</p>
+				<button
+					ng-click="showCustomModal()"
+					class="button button-positive">Show Login
+				</button>
+			</div>
+
+		</div>
+
+	</ion-content>
+</ion-view>

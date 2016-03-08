@@ -1,0 +1,43 @@
+<ion-modal-view>
+	<ion-content class="full-screen">
+
+		<div class="row row-no-padding row-center match-height">
+			<div class="col list list-inset">
+				<div class="row responsive-sm">
+					<div class="col">
+						<div class="padding-bottom">
+							<img src="img/avatar-2.png"
+							     style="width:90px;border-radius:50%;display:block;margin:0 auto">
+						</div>
+						<div class="list card">
+
+							<label class="item item-input">
+								<input ng-disabled="loading" type="text" placeholder="Username">
+							</label>
+							<label class="item item-input">
+								<input ng-disabled="loading" type="text" placeholder="Password">
+							</label>
+						</div>
+						<div class="list list-borderless">
+							<div class="item item-complex text-center padding-left padding-right">
+								<div class="button-bar">
+									<button
+										ng-disabled="loading"
+										ng-click="action_click()"
+										class="button button-block button-dark">
+										<div
+											ng-show="loading"
+											class="inline padding-right" style="position:relative;top:7px;">
+											<ion-spinner icon="android" class="spinner-light"></ion-spinner>
+										</div>
+										<span>Submit</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-modal-view>

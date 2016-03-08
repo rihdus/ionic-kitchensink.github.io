@@ -1,0 +1,111 @@
+<!--
+
+ Sliding Tab bar
+ ---------------
+
+ By default, ionic tab bar elements shrink in width in order to fit in the tab bar.
+ This becomes problematic when the number of element in the tab bar is too large.
+
+ This update is a workaround for this particular user case.
+
+ The idea is to remove flexbox behavior of the tabs and use overflow scroll to make the
+ tab bar horizontally scrollable if the collective width of the tab-item width exceed the tab width.
+
+ -->
+<style>
+	.tab-item.home-tab {
+		min-width: 100px;
+	}
+
+	.tab-item.mixture-tab {
+		min-width: 120px;
+	}
+
+	.tab-item.dreams-tab {
+		min-width: 110px;
+	}
+
+	.tab-item.code-tab {
+		min-width: 90px;
+	}
+</style>
+
+<ion-view cache-view="false">
+	<!--<simple-tabs>-->
+	<!--<simple-tab-item title="Home">-->
+	<!--<div ng-include="'src/kitchen-sink/tabsNavigation/cards-tab.html'"></div>-->
+	<!--</simple-tab-item>-->
+
+	<!--<simple-tab-item title="Favorites">-->
+	<!--<div ng-include="'src/kitchen-sink/tabsNavigation/fav-tab.html'"></div>-->
+	<!--</simple-tab-item>-->
+
+	<!--<simple-tab-item title="Settings">-->
+	<!--<div ng-include="'src/kitchen-sink/tabsNavigation/settings-tab.html'"></div>-->
+	<!--</simple-tab-item>-->
+	<!--</simple-tabs>-->
+
+	<!--<ion-tabs>-->
+		<!--<ion-tab title="Home Tab"-->
+		         <!--ui-sref="app.slidingTab.homeTab">-->
+			<!--<div ui-view="home-tab"></div>-->
+			<!--&lt;!&ndash;<div ng-include="'src/kitchen-sink/tabsNavigation/cards-tab.html'"></div>&ndash;&gt;-->
+		<!--</ion-tab>-->
+
+		<!--<ion-tab title="Favorites Tab with Long Text"-->
+		         <!--ui-sref="app.slidingTab.favTab">-->
+			<!--<div ui-view="fav-tab"></div>-->
+		<!--</ion-tab>-->
+
+		<!--<ion-tab title="Settings"-->
+		         <!--ui-sref="app.slidingTab.settingsTab">-->
+			<!--<div ui-view="settings-tab"></div>-->
+		<!--</ion-tab>-->
+	<!--</ion-tabs>-->
+
+	<ion-tabs>
+		<ion-tab title="Home Tab"
+		         ui-sref="app.slidingTab.homeTab">
+			<ion-nav-view name="home-tab"></ion-nav-view>
+			<!--<div ng-include="'src/kitchen-sink/tabsNavigation/cards-tab.html'"></div>-->
+		</ion-tab>
+
+		<ion-tab title="Favorites Tab with Long Text"
+		         ui-sref="app.slidingTab.favTab">
+			<ion-nav-view name="fav-tab"></ion-nav-view>
+		</ion-tab>
+
+		<ion-tab title="Settings"
+		         ui-sref="app.slidingTab.settingsTab">
+			<ion-nav-view name="settings-tab"></ion-nav-view>
+		</ion-tab>
+	</ion-tabs>
+</ion-view>
+
+
+<!--<div class="tabs tabs-top tabs-sliding">-->
+<!--<a class="tab-item">-->
+<!--Home-->
+<!--</a>-->
+<!--<a class="tab-item">-->
+<!--Favorites-->
+<!--</a>-->
+<!--<a class="tab-item">-->
+<!--Settings-->
+<!--</a>-->
+<!--</div>-->
+
+<!--<div ng-switch="currentTab">-->
+<!--<div ng-switch-default>-->
+<!--<div ng-include="'src/kitchen-sink/tabsNavigation/cards-tab.html'"></div>-->
+<!--</div>-->
+<!--<div ng-switch-when="homeTab">-->
+<!--<div ng-include="'src/kitchen-sink/tabsNavigation/cards-tab.html'"></div>-->
+<!--</div>-->
+<!--<div ng-switch-when="favTab">-->
+<!--<div ng-include="'src/kitchen-sink/tabsNavigation/fav-tab.html'"></div>-->
+<!--</div>-->
+<!--<div ng-switch-when="settingsTab">-->
+<!--<div ng-include="'src/kitchen-sink/tabsNavigation/settings-tab.html'"></div>-->
+<!--</div>-->
+<!--</div>-->

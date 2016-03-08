@@ -1,0 +1,38 @@
+<ion-view title="Search and Select">
+	<ion-content>
+		<div class="list">
+
+			<div class="item item-divider">
+				Select from Input
+			</div>
+
+			<label class="item item-input item-stacked-label">
+				<span class="input-label">Invite people</span>
+				<input type="text"
+				       ng-model="inviteQuery"
+				       search-select="items in findPeople"
+				       placeholder="Start typing to trigger selector">
+			</label>
+
+			<div class="item item-divider">
+				SelectService
+			</div>
+
+			<div class="item">
+				<h3>Using Select service api.</h3>
+				<div class="row row-no-padding">
+					<div class="col">
+						<button ng-click="showSearchSelector('upper')"
+						        class="button button-small">Click to trigger the selector.</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="item">
+				<p>{{selectedItem}}</p>
+			</div>
+
+		</div>
+
+	</ion-content>
+</ion-view>

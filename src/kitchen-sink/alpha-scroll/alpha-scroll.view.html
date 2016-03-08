@@ -1,0 +1,33 @@
+<ion-view title="Alphabetical Scroll">
+	<ion-content delegate-handle="alphaScrollDelegate">
+
+		<div class="alpha-scroll-content">
+			<div ng-repeat="(char, charItems) in list"
+			     style="margin-bottom: 0"
+			     class="list"
+			     id="{{charItems.id}}">
+				<div class="item item-divider">
+					{{charItems.name}}
+				</div>
+
+				<div ng-repeat="charItem in charItems" class="item">
+					{{charItem.desc}}
+				</div>
+			</div>
+
+			<div class="list">
+				<label class="item item-input">
+					<input type="text"
+					       placeholder="" hello/>
+				</label>
+			</div>
+
+		</div>
+
+		<div ion-alpha-scroll-bar="alphaScrollDelegate"
+		     scroll-index="indices">
+		</div>
+
+	</ion-content>
+
+</ion-view>

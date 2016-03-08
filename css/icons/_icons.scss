@@ -1,0 +1,1573 @@
+@font-face {
+  font-family: "ic";
+  src: url('icons/ic.eot');
+  src: url('icons/ic.eot?#iefix') format('eot'),
+  url('icons/ic.woff') format('woff'),
+  url('icons/ic.ttf') format('truetype'),
+  url('icons/ic.svg#ic') format('svg');
+}
+
+@mixin icon-styles {
+  font-family: "ic";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+  text-decoration: none;
+  text-transform: none;
+}
+
+%icon {
+  @include icon-styles;
+}
+
+@function icon-char($filename) {
+  $char: "";
+
+  @if $filename == alert-circled {
+  $char: "\E001";
+}
+  @if $filename == alert {
+  $char: "\E002";
+}
+  @if $filename == android-add-circle {
+  $char: "\E003";
+}
+  @if $filename == android-add {
+  $char: "\E004";
+}
+  @if $filename == android-alarm-clock {
+  $char: "\E005";
+}
+  @if $filename == android-alert {
+  $char: "\E006";
+}
+  @if $filename == android-apps {
+  $char: "\E007";
+}
+  @if $filename == android-archive {
+  $char: "\E008";
+}
+  @if $filename == android-arrow-back {
+  $char: "\E009";
+}
+  @if $filename == android-arrow-down {
+  $char: "\E00A";
+}
+  @if $filename == android-arrow-dropdown-circle {
+  $char: "\E00B";
+}
+  @if $filename == android-arrow-dropdown {
+  $char: "\E00C";
+}
+  @if $filename == android-arrow-dropleft-circle {
+  $char: "\E00D";
+}
+  @if $filename == android-arrow-dropleft {
+  $char: "\E00E";
+}
+  @if $filename == android-arrow-dropright-circle {
+  $char: "\E00F";
+}
+  @if $filename == android-arrow-dropright {
+  $char: "\E010";
+}
+  @if $filename == android-arrow-dropup-circle {
+  $char: "\E011";
+}
+  @if $filename == android-arrow-dropup {
+  $char: "\E012";
+}
+  @if $filename == android-arrow-forward {
+  $char: "\E013";
+}
+  @if $filename == android-arrow-up {
+  $char: "\E014";
+}
+  @if $filename == android-attach {
+  $char: "\E015";
+}
+  @if $filename == android-bar {
+  $char: "\E016";
+}
+  @if $filename == android-bicycle {
+  $char: "\E017";
+}
+  @if $filename == android-boat {
+  $char: "\E018";
+}
+  @if $filename == android-bookmark {
+  $char: "\E019";
+}
+  @if $filename == android-bulb {
+  $char: "\E01A";
+}
+  @if $filename == android-bus {
+  $char: "\E01B";
+}
+  @if $filename == android-calendar {
+  $char: "\E01C";
+}
+  @if $filename == android-call {
+  $char: "\E01D";
+}
+  @if $filename == android-camera {
+  $char: "\E01E";
+}
+  @if $filename == android-cancel {
+  $char: "\E01F";
+}
+  @if $filename == android-car {
+  $char: "\E020";
+}
+  @if $filename == android-cart {
+  $char: "\E021";
+}
+  @if $filename == android-chat {
+  $char: "\E022";
+}
+  @if $filename == android-checkbox-blank {
+  $char: "\E023";
+}
+  @if $filename == android-checkbox-outline-blank {
+  $char: "\E024";
+}
+  @if $filename == android-checkbox-outline {
+  $char: "\E025";
+}
+  @if $filename == android-checkbox {
+  $char: "\E026";
+}
+  @if $filename == android-checkmark-circle {
+  $char: "\E027";
+}
+  @if $filename == android-clipboard {
+  $char: "\E028";
+}
+  @if $filename == android-close {
+  $char: "\E029";
+}
+  @if $filename == android-cloud-circle {
+  $char: "\E02A";
+}
+  @if $filename == android-cloud-done {
+  $char: "\E02B";
+}
+  @if $filename == android-cloud-outline {
+  $char: "\E02C";
+}
+  @if $filename == android-cloud {
+  $char: "\E02D";
+}
+  @if $filename == android-color-palette {
+  $char: "\E02E";
+}
+  @if $filename == android-compass {
+  $char: "\E02F";
+}
+  @if $filename == android-contact {
+  $char: "\E030";
+}
+  @if $filename == android-contacts {
+  $char: "\E031";
+}
+  @if $filename == android-contract {
+  $char: "\E032";
+}
+  @if $filename == android-create {
+  $char: "\E033";
+}
+  @if $filename == android-delete {
+  $char: "\E034";
+}
+  @if $filename == android-desktop {
+  $char: "\E035";
+}
+  @if $filename == android-document {
+  $char: "\E036";
+}
+  @if $filename == android-done-all {
+  $char: "\E037";
+}
+  @if $filename == android-done {
+  $char: "\E038";
+}
+  @if $filename == android-download {
+  $char: "\E039";
+}
+  @if $filename == android-drafts {
+  $char: "\E03A";
+}
+  @if $filename == android-exit {
+  $char: "\E03B";
+}
+  @if $filename == android-expand {
+  $char: "\E03C";
+}
+  @if $filename == android-favorite-outline {
+  $char: "\E03D";
+}
+  @if $filename == android-favorite {
+  $char: "\E03E";
+}
+  @if $filename == android-film {
+  $char: "\E03F";
+}
+  @if $filename == android-folder-open {
+  $char: "\E040";
+}
+  @if $filename == android-folder {
+  $char: "\E041";
+}
+  @if $filename == android-funnel {
+  $char: "\E042";
+}
+  @if $filename == android-globe {
+  $char: "\E043";
+}
+  @if $filename == android-hand {
+  $char: "\E044";
+}
+  @if $filename == android-hangout {
+  $char: "\E045";
+}
+  @if $filename == android-happy {
+  $char: "\E046";
+}
+  @if $filename == android-home {
+  $char: "\E047";
+}
+  @if $filename == android-image {
+  $char: "\E048";
+}
+  @if $filename == android-laptop {
+  $char: "\E049";
+}
+  @if $filename == android-list {
+  $char: "\E04A";
+}
+  @if $filename == android-locate {
+  $char: "\E04B";
+}
+  @if $filename == android-lock {
+  $char: "\E04C";
+}
+  @if $filename == android-mail {
+  $char: "\E04D";
+}
+  @if $filename == android-map {
+  $char: "\E04E";
+}
+  @if $filename == android-menu {
+  $char: "\E04F";
+}
+  @if $filename == android-microphone-off {
+  $char: "\E050";
+}
+  @if $filename == android-microphone {
+  $char: "\E051";
+}
+  @if $filename == android-more-horizontal {
+  $char: "\E052";
+}
+  @if $filename == android-more-vertical {
+  $char: "\E053";
+}
+  @if $filename == android-navigate {
+  $char: "\E054";
+}
+  @if $filename == android-notifications-none {
+  $char: "\E055";
+}
+  @if $filename == android-notifications-off {
+  $char: "\E056";
+}
+  @if $filename == android-notifications {
+  $char: "\E057";
+}
+  @if $filename == android-open {
+  $char: "\E058";
+}
+  @if $filename == android-options {
+  $char: "\E059";
+}
+  @if $filename == android-people {
+  $char: "\E05A";
+}
+  @if $filename == android-person-add {
+  $char: "\E05B";
+}
+  @if $filename == android-person {
+  $char: "\E05C";
+}
+  @if $filename == android-phone-landscape {
+  $char: "\E05D";
+}
+  @if $filename == android-phone-portrait {
+  $char: "\E05E";
+}
+  @if $filename == android-pin {
+  $char: "\E05F";
+}
+  @if $filename == android-plane {
+  $char: "\E060";
+}
+  @if $filename == android-playstore {
+  $char: "\E061";
+}
+  @if $filename == android-print {
+  $char: "\E062";
+}
+  @if $filename == android-radio-button-off {
+  $char: "\E063";
+}
+  @if $filename == android-radio-button-on {
+  $char: "\E064";
+}
+  @if $filename == android-refresh {
+  $char: "\E065";
+}
+  @if $filename == android-remove-circle {
+  $char: "\E066";
+}
+  @if $filename == android-remove {
+  $char: "\E067";
+}
+  @if $filename == android-restaurant {
+  $char: "\E068";
+}
+  @if $filename == android-sad {
+  $char: "\E069";
+}
+  @if $filename == android-search {
+  $char: "\E06A";
+}
+  @if $filename == android-send {
+  $char: "\E06B";
+}
+  @if $filename == android-settings {
+  $char: "\E06C";
+}
+  @if $filename == android-share-alt {
+  $char: "\E06D";
+}
+  @if $filename == android-share {
+  $char: "\E06E";
+}
+  @if $filename == android-star-half {
+  $char: "\E06F";
+}
+  @if $filename == android-star-outline {
+  $char: "\E070";
+}
+  @if $filename == android-star {
+  $char: "\E071";
+}
+  @if $filename == android-stopwatch {
+  $char: "\E072";
+}
+  @if $filename == android-subway {
+  $char: "\E073";
+}
+  @if $filename == android-sunny {
+  $char: "\E074";
+}
+  @if $filename == android-sync {
+  $char: "\E075";
+}
+  @if $filename == android-textsms {
+  $char: "\E076";
+}
+  @if $filename == android-time {
+  $char: "\E077";
+}
+  @if $filename == android-train {
+  $char: "\E078";
+}
+  @if $filename == android-unlock {
+  $char: "\E079";
+}
+  @if $filename == android-upload {
+  $char: "\E07A";
+}
+  @if $filename == android-volume-down {
+  $char: "\E07B";
+}
+  @if $filename == android-volume-mute {
+  $char: "\E07C";
+}
+  @if $filename == android-volume-off {
+  $char: "\E07D";
+}
+  @if $filename == android-volume-up {
+  $char: "\E07E";
+}
+  @if $filename == android-walk {
+  $char: "\E07F";
+}
+  @if $filename == android-warning {
+  $char: "\E080";
+}
+  @if $filename == android-watch {
+  $char: "\E081";
+}
+  @if $filename == android-wifi {
+  $char: "\E082";
+}
+  @if $filename == aperture {
+  $char: "\E083";
+}
+  @if $filename == archive {
+  $char: "\E084";
+}
+  @if $filename == arrow-down-a {
+  $char: "\E085";
+}
+  @if $filename == arrow-down-b {
+  $char: "\E086";
+}
+  @if $filename == arrow-down-c {
+  $char: "\E087";
+}
+  @if $filename == arrow-expand {
+  $char: "\E088";
+}
+  @if $filename == arrow-graph-down-left {
+  $char: "\E089";
+}
+  @if $filename == arrow-graph-down-right {
+  $char: "\E08A";
+}
+  @if $filename == arrow-graph-up-left {
+  $char: "\E08B";
+}
+  @if $filename == arrow-graph-up-right {
+  $char: "\E08C";
+}
+  @if $filename == arrow-left-a {
+  $char: "\E08D";
+}
+  @if $filename == arrow-left-b {
+  $char: "\E08E";
+}
+  @if $filename == arrow-left-c {
+  $char: "\E08F";
+}
+  @if $filename == arrow-move {
+  $char: "\E090";
+}
+  @if $filename == arrow-resize {
+  $char: "\E091";
+}
+  @if $filename == arrow-return-left {
+  $char: "\E092";
+}
+  @if $filename == arrow-return-right {
+  $char: "\E093";
+}
+  @if $filename == arrow-right-a {
+  $char: "\E094";
+}
+  @if $filename == arrow-right-b {
+  $char: "\E095";
+}
+  @if $filename == arrow-right-c {
+  $char: "\E096";
+}
+  @if $filename == arrow-shrink {
+  $char: "\E097";
+}
+  @if $filename == arrow-swap {
+  $char: "\E098";
+}
+  @if $filename == arrow-up-a {
+  $char: "\E099";
+}
+  @if $filename == arrow-up-b {
+  $char: "\E09A";
+}
+  @if $filename == arrow-up-c {
+  $char: "\E09B";
+}
+  @if $filename == asterisk {
+  $char: "\E09C";
+}
+  @if $filename == at {
+  $char: "\E09D";
+}
+  @if $filename == backspace-outline {
+  $char: "\E09E";
+}
+  @if $filename == backspace {
+  $char: "\E09F";
+}
+  @if $filename == bag {
+  $char: "\E0A0";
+}
+  @if $filename == battery-charging {
+  $char: "\E0A1";
+}
+  @if $filename == battery-empty {
+  $char: "\E0A2";
+}
+  @if $filename == battery-full {
+  $char: "\E0A3";
+}
+  @if $filename == battery-half {
+  $char: "\E0A4";
+}
+  @if $filename == battery-low {
+  $char: "\E0A5";
+}
+  @if $filename == beaker {
+  $char: "\E0A6";
+}
+  @if $filename == beer {
+  $char: "\E0A7";
+}
+  @if $filename == bluetooth {
+  $char: "\E0A8";
+}
+  @if $filename == bonfire {
+  $char: "\E0A9";
+}
+  @if $filename == bookmark {
+  $char: "\E0AA";
+}
+  @if $filename == bowtie {
+  $char: "\E0AB";
+}
+  @if $filename == briefcase {
+  $char: "\E0AC";
+}
+  @if $filename == bug {
+  $char: "\E0AD";
+}
+  @if $filename == calculator {
+  $char: "\E0AE";
+}
+  @if $filename == calendar {
+  $char: "\E0AF";
+}
+  @if $filename == camera {
+  $char: "\E0B0";
+}
+  @if $filename == card {
+  $char: "\E0B1";
+}
+  @if $filename == cash {
+  $char: "\E0B2";
+}
+  @if $filename == chatbox-working {
+  $char: "\E0B3";
+}
+  @if $filename == chatbox {
+  $char: "\E0B4";
+}
+  @if $filename == chatboxes {
+  $char: "\E0B5";
+}
+  @if $filename == chatbubble-working {
+  $char: "\E0B6";
+}
+  @if $filename == chatbubble {
+  $char: "\E0B7";
+}
+  @if $filename == chatbubbles {
+  $char: "\E0B8";
+}
+  @if $filename == checkmark-circled {
+  $char: "\E0B9";
+}
+  @if $filename == checkmark-round {
+  $char: "\E0BA";
+}
+  @if $filename == checkmark {
+  $char: "\E0BB";
+}
+  @if $filename == chevron-down {
+  $char: "\E0BC";
+}
+  @if $filename == chevron-left {
+  $char: "\E0BD";
+}
+  @if $filename == chevron-right {
+  $char: "\E0BE";
+}
+  @if $filename == chevron-up {
+  $char: "\E0BF";
+}
+  @if $filename == clipboard {
+  $char: "\E0C0";
+}
+  @if $filename == clock {
+  $char: "\E0C1";
+}
+  @if $filename == close-circled {
+  $char: "\E0C2";
+}
+  @if $filename == close-round {
+  $char: "\E0C3";
+}
+  @if $filename == close {
+  $char: "\E0C4";
+}
+  @if $filename == closed-captioning {
+  $char: "\E0C5";
+}
+  @if $filename == cloud {
+  $char: "\E0C6";
+}
+  @if $filename == code-download {
+  $char: "\E0C7";
+}
+  @if $filename == code-working {
+  $char: "\E0C8";
+}
+  @if $filename == code {
+  $char: "\E0C9";
+}
+  @if $filename == coffee {
+  $char: "\E0CA";
+}
+  @if $filename == compass {
+  $char: "\E0CB";
+}
+  @if $filename == compose {
+  $char: "\E0CC";
+}
+  @if $filename == connection-bars {
+  $char: "\E0CD";
+}
+  @if $filename == contrast {
+  $char: "\E0CE";
+}
+  @if $filename == crop {
+  $char: "\E0CF";
+}
+  @if $filename == cube {
+  $char: "\E0D0";
+}
+  @if $filename == disc {
+  $char: "\E0D1";
+}
+  @if $filename == document-text {
+  $char: "\E0D2";
+}
+  @if $filename == document {
+  $char: "\E0D3";
+}
+  @if $filename == drag {
+  $char: "\E0D4";
+}
+  @if $filename == earth {
+  $char: "\E0D5";
+}
+  @if $filename == easel {
+  $char: "\E0D6";
+}
+  @if $filename == edit {
+  $char: "\E0D7";
+}
+  @if $filename == egg {
+  $char: "\E0D8";
+}
+  @if $filename == eject {
+  $char: "\E0D9";
+}
+  @if $filename == email-unread {
+  $char: "\E0DA";
+}
+  @if $filename == email {
+  $char: "\E0DB";
+}
+  @if $filename == erlenmeyer-flask-bubbles {
+  $char: "\E0DC";
+}
+  @if $filename == erlenmeyer-flask {
+  $char: "\E0DD";
+}
+  @if $filename == eye-disabled {
+  $char: "\E0DE";
+}
+  @if $filename == eye {
+  $char: "\E0DF";
+}
+  @if $filename == female {
+  $char: "\E0E0";
+}
+  @if $filename == filing {
+  $char: "\E0E1";
+}
+  @if $filename == film-marker {
+  $char: "\E0E2";
+}
+  @if $filename == fireball {
+  $char: "\E0E3";
+}
+  @if $filename == flag {
+  $char: "\E0E4";
+}
+  @if $filename == flame {
+  $char: "\E0E5";
+}
+  @if $filename == flash-off {
+  $char: "\E0E6";
+}
+  @if $filename == flash {
+  $char: "\E0E7";
+}
+  @if $filename == folder {
+  $char: "\E0E8";
+}
+  @if $filename == fork-repo {
+  $char: "\E0E9";
+}
+  @if $filename == fork {
+  $char: "\E0EA";
+}
+  @if $filename == forward {
+  $char: "\E0EB";
+}
+  @if $filename == funnel {
+  $char: "\E0EC";
+}
+  @if $filename == gear-a {
+  $char: "\E0ED";
+}
+  @if $filename == gear-b {
+  $char: "\E0EE";
+}
+  @if $filename == grid {
+  $char: "\E0EF";
+}
+  @if $filename == hammer {
+  $char: "\E0F0";
+}
+  @if $filename == happy-outline {
+  $char: "\E0F1";
+}
+  @if $filename == happy {
+  $char: "\E0F2";
+}
+  @if $filename == headphone {
+  $char: "\E0F3";
+}
+  @if $filename == heart-broken {
+  $char: "\E0F4";
+}
+  @if $filename == heart {
+  $char: "\E0F5";
+}
+  @if $filename == help-buoy {
+  $char: "\E0F6";
+}
+  @if $filename == help-circled {
+  $char: "\E0F7";
+}
+  @if $filename == help {
+  $char: "\E0F8";
+}
+  @if $filename == home {
+  $char: "\E0F9";
+}
+  @if $filename == icecream {
+  $char: "\E0FA";
+}
+  @if $filename == image {
+  $char: "\E0FB";
+}
+  @if $filename == images {
+  $char: "\E0FC";
+}
+  @if $filename == information-circled {
+  $char: "\E0FD";
+}
+  @if $filename == information {
+  $char: "\E0FE";
+}
+  @if $filename == ionic {
+  $char: "\E0FF";
+}
+
+@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+&:#{$insert} {
+  @if $extend {
+    @extend %icon;
+  } @else {
+    @include icon-styles;
+  }
+  content: icon-char($filename);
+}
+}
+
+.icon-alert-circled {
+  @include icon(alert-circled);
+}
+.icon-alert {
+  @include icon(alert);
+}
+.icon-android-add-circle {
+  @include icon(android-add-circle);
+}
+.icon-android-add {
+  @include icon(android-add);
+}
+.icon-android-alarm-clock {
+  @include icon(android-alarm-clock);
+}
+.icon-android-alert {
+  @include icon(android-alert);
+}
+.icon-android-apps {
+  @include icon(android-apps);
+}
+.icon-android-archive {
+  @include icon(android-archive);
+}
+.icon-android-arrow-back {
+  @include icon(android-arrow-back);
+}
+.icon-android-arrow-down {
+  @include icon(android-arrow-down);
+}
+.icon-android-arrow-dropdown-circle {
+  @include icon(android-arrow-dropdown-circle);
+}
+.icon-android-arrow-dropdown {
+  @include icon(android-arrow-dropdown);
+}
+.icon-android-arrow-dropleft-circle {
+  @include icon(android-arrow-dropleft-circle);
+}
+.icon-android-arrow-dropleft {
+  @include icon(android-arrow-dropleft);
+}
+.icon-android-arrow-dropright-circle {
+  @include icon(android-arrow-dropright-circle);
+}
+.icon-android-arrow-dropright {
+  @include icon(android-arrow-dropright);
+}
+.icon-android-arrow-dropup-circle {
+  @include icon(android-arrow-dropup-circle);
+}
+.icon-android-arrow-dropup {
+  @include icon(android-arrow-dropup);
+}
+.icon-android-arrow-forward {
+  @include icon(android-arrow-forward);
+}
+.icon-android-arrow-up {
+  @include icon(android-arrow-up);
+}
+.icon-android-attach {
+  @include icon(android-attach);
+}
+.icon-android-bar {
+  @include icon(android-bar);
+}
+.icon-android-bicycle {
+  @include icon(android-bicycle);
+}
+.icon-android-boat {
+  @include icon(android-boat);
+}
+.icon-android-bookmark {
+  @include icon(android-bookmark);
+}
+.icon-android-bulb {
+  @include icon(android-bulb);
+}
+.icon-android-bus {
+  @include icon(android-bus);
+}
+.icon-android-calendar {
+  @include icon(android-calendar);
+}
+.icon-android-call {
+  @include icon(android-call);
+}
+.icon-android-camera {
+  @include icon(android-camera);
+}
+.icon-android-cancel {
+  @include icon(android-cancel);
+}
+.icon-android-car {
+  @include icon(android-car);
+}
+.icon-android-cart {
+  @include icon(android-cart);
+}
+.icon-android-chat {
+  @include icon(android-chat);
+}
+.icon-android-checkbox-blank {
+  @include icon(android-checkbox-blank);
+}
+.icon-android-checkbox-outline-blank {
+  @include icon(android-checkbox-outline-blank);
+}
+.icon-android-checkbox-outline {
+  @include icon(android-checkbox-outline);
+}
+.icon-android-checkbox {
+  @include icon(android-checkbox);
+}
+.icon-android-checkmark-circle {
+  @include icon(android-checkmark-circle);
+}
+.icon-android-clipboard {
+  @include icon(android-clipboard);
+}
+.icon-android-close {
+  @include icon(android-close);
+}
+.icon-android-cloud-circle {
+  @include icon(android-cloud-circle);
+}
+.icon-android-cloud-done {
+  @include icon(android-cloud-done);
+}
+.icon-android-cloud-outline {
+  @include icon(android-cloud-outline);
+}
+.icon-android-cloud {
+  @include icon(android-cloud);
+}
+.icon-android-color-palette {
+  @include icon(android-color-palette);
+}
+.icon-android-compass {
+  @include icon(android-compass);
+}
+.icon-android-contact {
+  @include icon(android-contact);
+}
+.icon-android-contacts {
+  @include icon(android-contacts);
+}
+.icon-android-contract {
+  @include icon(android-contract);
+}
+.icon-android-create {
+  @include icon(android-create);
+}
+.icon-android-delete {
+  @include icon(android-delete);
+}
+.icon-android-desktop {
+  @include icon(android-desktop);
+}
+.icon-android-document {
+  @include icon(android-document);
+}
+.icon-android-done-all {
+  @include icon(android-done-all);
+}
+.icon-android-done {
+  @include icon(android-done);
+}
+.icon-android-download {
+  @include icon(android-download);
+}
+.icon-android-drafts {
+  @include icon(android-drafts);
+}
+.icon-android-exit {
+  @include icon(android-exit);
+}
+.icon-android-expand {
+  @include icon(android-expand);
+}
+.icon-android-favorite-outline {
+  @include icon(android-favorite-outline);
+}
+.icon-android-favorite {
+  @include icon(android-favorite);
+}
+.icon-android-film {
+  @include icon(android-film);
+}
+.icon-android-folder-open {
+  @include icon(android-folder-open);
+}
+.icon-android-folder {
+  @include icon(android-folder);
+}
+.icon-android-funnel {
+  @include icon(android-funnel);
+}
+.icon-android-globe {
+  @include icon(android-globe);
+}
+.icon-android-hand {
+  @include icon(android-hand);
+}
+.icon-android-hangout {
+  @include icon(android-hangout);
+}
+.icon-android-happy {
+  @include icon(android-happy);
+}
+.icon-android-home {
+  @include icon(android-home);
+}
+.icon-android-image {
+  @include icon(android-image);
+}
+.icon-android-laptop {
+  @include icon(android-laptop);
+}
+.icon-android-list {
+  @include icon(android-list);
+}
+.icon-android-locate {
+  @include icon(android-locate);
+}
+.icon-android-lock {
+  @include icon(android-lock);
+}
+.icon-android-mail {
+  @include icon(android-mail);
+}
+.icon-android-map {
+  @include icon(android-map);
+}
+.icon-android-menu {
+  @include icon(android-menu);
+}
+.icon-android-microphone-off {
+  @include icon(android-microphone-off);
+}
+.icon-android-microphone {
+  @include icon(android-microphone);
+}
+.icon-android-more-horizontal {
+  @include icon(android-more-horizontal);
+}
+.icon-android-more-vertical {
+  @include icon(android-more-vertical);
+}
+.icon-android-navigate {
+  @include icon(android-navigate);
+}
+.icon-android-notifications-none {
+  @include icon(android-notifications-none);
+}
+.icon-android-notifications-off {
+  @include icon(android-notifications-off);
+}
+.icon-android-notifications {
+  @include icon(android-notifications);
+}
+.icon-android-open {
+  @include icon(android-open);
+}
+.icon-android-options {
+  @include icon(android-options);
+}
+.icon-android-people {
+  @include icon(android-people);
+}
+.icon-android-person-add {
+  @include icon(android-person-add);
+}
+.icon-android-person {
+  @include icon(android-person);
+}
+.icon-android-phone-landscape {
+  @include icon(android-phone-landscape);
+}
+.icon-android-phone-portrait {
+  @include icon(android-phone-portrait);
+}
+.icon-android-pin {
+  @include icon(android-pin);
+}
+.icon-android-plane {
+  @include icon(android-plane);
+}
+.icon-android-playstore {
+  @include icon(android-playstore);
+}
+.icon-android-print {
+  @include icon(android-print);
+}
+.icon-android-radio-button-off {
+  @include icon(android-radio-button-off);
+}
+.icon-android-radio-button-on {
+  @include icon(android-radio-button-on);
+}
+.icon-android-refresh {
+  @include icon(android-refresh);
+}
+.icon-android-remove-circle {
+  @include icon(android-remove-circle);
+}
+.icon-android-remove {
+  @include icon(android-remove);
+}
+.icon-android-restaurant {
+  @include icon(android-restaurant);
+}
+.icon-android-sad {
+  @include icon(android-sad);
+}
+.icon-android-search {
+  @include icon(android-search);
+}
+.icon-android-send {
+  @include icon(android-send);
+}
+.icon-android-settings {
+  @include icon(android-settings);
+}
+.icon-android-share-alt {
+  @include icon(android-share-alt);
+}
+.icon-android-share {
+  @include icon(android-share);
+}
+.icon-android-star-half {
+  @include icon(android-star-half);
+}
+.icon-android-star-outline {
+  @include icon(android-star-outline);
+}
+.icon-android-star {
+  @include icon(android-star);
+}
+.icon-android-stopwatch {
+  @include icon(android-stopwatch);
+}
+.icon-android-subway {
+  @include icon(android-subway);
+}
+.icon-android-sunny {
+  @include icon(android-sunny);
+}
+.icon-android-sync {
+  @include icon(android-sync);
+}
+.icon-android-textsms {
+  @include icon(android-textsms);
+}
+.icon-android-time {
+  @include icon(android-time);
+}
+.icon-android-train {
+  @include icon(android-train);
+}
+.icon-android-unlock {
+  @include icon(android-unlock);
+}
+.icon-android-upload {
+  @include icon(android-upload);
+}
+.icon-android-volume-down {
+  @include icon(android-volume-down);
+}
+.icon-android-volume-mute {
+  @include icon(android-volume-mute);
+}
+.icon-android-volume-off {
+  @include icon(android-volume-off);
+}
+.icon-android-volume-up {
+  @include icon(android-volume-up);
+}
+.icon-android-walk {
+  @include icon(android-walk);
+}
+.icon-android-warning {
+  @include icon(android-warning);
+}
+.icon-android-watch {
+  @include icon(android-watch);
+}
+.icon-android-wifi {
+  @include icon(android-wifi);
+}
+.icon-aperture {
+  @include icon(aperture);
+}
+.icon-archive {
+  @include icon(archive);
+}
+.icon-arrow-down-a {
+  @include icon(arrow-down-a);
+}
+.icon-arrow-down-b {
+  @include icon(arrow-down-b);
+}
+.icon-arrow-down-c {
+  @include icon(arrow-down-c);
+}
+.icon-arrow-expand {
+  @include icon(arrow-expand);
+}
+.icon-arrow-graph-down-left {
+  @include icon(arrow-graph-down-left);
+}
+.icon-arrow-graph-down-right {
+  @include icon(arrow-graph-down-right);
+}
+.icon-arrow-graph-up-left {
+  @include icon(arrow-graph-up-left);
+}
+.icon-arrow-graph-up-right {
+  @include icon(arrow-graph-up-right);
+}
+.icon-arrow-left-a {
+  @include icon(arrow-left-a);
+}
+.icon-arrow-left-b {
+  @include icon(arrow-left-b);
+}
+.icon-arrow-left-c {
+  @include icon(arrow-left-c);
+}
+.icon-arrow-move {
+  @include icon(arrow-move);
+}
+.icon-arrow-resize {
+  @include icon(arrow-resize);
+}
+.icon-arrow-return-left {
+  @include icon(arrow-return-left);
+}
+.icon-arrow-return-right {
+  @include icon(arrow-return-right);
+}
+.icon-arrow-right-a {
+  @include icon(arrow-right-a);
+}
+.icon-arrow-right-b {
+  @include icon(arrow-right-b);
+}
+.icon-arrow-right-c {
+  @include icon(arrow-right-c);
+}
+.icon-arrow-shrink {
+  @include icon(arrow-shrink);
+}
+.icon-arrow-swap {
+  @include icon(arrow-swap);
+}
+.icon-arrow-up-a {
+  @include icon(arrow-up-a);
+}
+.icon-arrow-up-b {
+  @include icon(arrow-up-b);
+}
+.icon-arrow-up-c {
+  @include icon(arrow-up-c);
+}
+.icon-asterisk {
+  @include icon(asterisk);
+}
+.icon-at {
+  @include icon(at);
+}
+.icon-backspace-outline {
+  @include icon(backspace-outline);
+}
+.icon-backspace {
+  @include icon(backspace);
+}
+.icon-bag {
+  @include icon(bag);
+}
+.icon-battery-charging {
+  @include icon(battery-charging);
+}
+.icon-battery-empty {
+  @include icon(battery-empty);
+}
+.icon-battery-full {
+  @include icon(battery-full);
+}
+.icon-battery-half {
+  @include icon(battery-half);
+}
+.icon-battery-low {
+  @include icon(battery-low);
+}
+.icon-beaker {
+  @include icon(beaker);
+}
+.icon-beer {
+  @include icon(beer);
+}
+.icon-bluetooth {
+  @include icon(bluetooth);
+}
+.icon-bonfire {
+  @include icon(bonfire);
+}
+.icon-bookmark {
+  @include icon(bookmark);
+}
+.icon-bowtie {
+  @include icon(bowtie);
+}
+.icon-briefcase {
+  @include icon(briefcase);
+}
+.icon-bug {
+  @include icon(bug);
+}
+.icon-calculator {
+  @include icon(calculator);
+}
+.icon-calendar {
+  @include icon(calendar);
+}
+.icon-camera {
+  @include icon(camera);
+}
+.icon-card {
+  @include icon(card);
+}
+.icon-cash {
+  @include icon(cash);
+}
+.icon-chatbox-working {
+  @include icon(chatbox-working);
+}
+.icon-chatbox {
+  @include icon(chatbox);
+}
+.icon-chatboxes {
+  @include icon(chatboxes);
+}
+.icon-chatbubble-working {
+  @include icon(chatbubble-working);
+}
+.icon-chatbubble {
+  @include icon(chatbubble);
+}
+.icon-chatbubbles {
+  @include icon(chatbubbles);
+}
+.icon-checkmark-circled {
+  @include icon(checkmark-circled);
+}
+.icon-checkmark-round {
+  @include icon(checkmark-round);
+}
+.icon-checkmark {
+  @include icon(checkmark);
+}
+.icon-chevron-down {
+  @include icon(chevron-down);
+}
+.icon-chevron-left {
+  @include icon(chevron-left);
+}
+.icon-chevron-right {
+  @include icon(chevron-right);
+}
+.icon-chevron-up {
+  @include icon(chevron-up);
+}
+.icon-clipboard {
+  @include icon(clipboard);
+}
+.icon-clock {
+  @include icon(clock);
+}
+.icon-close-circled {
+  @include icon(close-circled);
+}
+.icon-close-round {
+  @include icon(close-round);
+}
+.icon-close {
+  @include icon(close);
+}
+.icon-closed-captioning {
+  @include icon(closed-captioning);
+}
+.icon-cloud {
+  @include icon(cloud);
+}
+.icon-code-download {
+  @include icon(code-download);
+}
+.icon-code-working {
+  @include icon(code-working);
+}
+.icon-code {
+  @include icon(code);
+}
+.icon-coffee {
+  @include icon(coffee);
+}
+.icon-compass {
+  @include icon(compass);
+}
+.icon-compose {
+  @include icon(compose);
+}
+.icon-connection-bars {
+  @include icon(connection-bars);
+}
+.icon-contrast {
+  @include icon(contrast);
+}
+.icon-crop {
+  @include icon(crop);
+}
+.icon-cube {
+  @include icon(cube);
+}
+.icon-disc {
+  @include icon(disc);
+}
+.icon-document-text {
+  @include icon(document-text);
+}
+.icon-document {
+  @include icon(document);
+}
+.icon-drag {
+  @include icon(drag);
+}
+.icon-earth {
+  @include icon(earth);
+}
+.icon-easel {
+  @include icon(easel);
+}
+.icon-edit {
+  @include icon(edit);
+}
+.icon-egg {
+  @include icon(egg);
+}
+.icon-eject {
+  @include icon(eject);
+}
+.icon-email-unread {
+  @include icon(email-unread);
+}
+.icon-email {
+  @include icon(email);
+}
+.icon-erlenmeyer-flask-bubbles {
+  @include icon(erlenmeyer-flask-bubbles);
+}
+.icon-erlenmeyer-flask {
+  @include icon(erlenmeyer-flask);
+}
+.icon-eye-disabled {
+  @include icon(eye-disabled);
+}
+.icon-eye {
+  @include icon(eye);
+}
+.icon-female {
+  @include icon(female);
+}
+.icon-filing {
+  @include icon(filing);
+}
+.icon-film-marker {
+  @include icon(film-marker);
+}
+.icon-fireball {
+  @include icon(fireball);
+}
+.icon-flag {
+  @include icon(flag);
+}
+.icon-flame {
+  @include icon(flame);
+}
+.icon-flash-off {
+  @include icon(flash-off);
+}
+.icon-flash {
+  @include icon(flash);
+}
+.icon-folder {
+  @include icon(folder);
+}
+.icon-fork-repo {
+  @include icon(fork-repo);
+}
+.icon-fork {
+  @include icon(fork);
+}
+.icon-forward {
+  @include icon(forward);
+}
+.icon-funnel {
+  @include icon(funnel);
+}
+.icon-gear-a {
+  @include icon(gear-a);
+}
+.icon-gear-b {
+  @include icon(gear-b);
+}
+.icon-grid {
+  @include icon(grid);
+}
+.icon-hammer {
+  @include icon(hammer);
+}
+.icon-happy-outline {
+  @include icon(happy-outline);
+}
+.icon-happy {
+  @include icon(happy);
+}
+.icon-headphone {
+  @include icon(headphone);
+}
+.icon-heart-broken {
+  @include icon(heart-broken);
+}
+.icon-heart {
+  @include icon(heart);
+}
+.icon-help-buoy {
+  @include icon(help-buoy);
+}
+.icon-help-circled {
+  @include icon(help-circled);
+}
+.icon-help {
+  @include icon(help);
+}
+.icon-home {
+  @include icon(home);
+}
+.icon-icecream {
+  @include icon(icecream);
+}
+.icon-image {
+  @include icon(image);
+}
+.icon-images {
+  @include icon(images);
+}
+.icon-information-circled {
+  @include icon(information-circled);
+}
+.icon-information {
+  @include icon(information);
+}
+.icon-ionic {
+  @include icon(ionic);
+}
